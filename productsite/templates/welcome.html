@@ -4,9 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<style>
+		div{
+			position: absolute;
+			right: 10px;
+			top: 5px;
+		}
+	</style>
 </head>
+
 <body>
-{% csrf_token %}
-<h1>Welcome</h1>
+
+Welcome {{n}}
+<div>
+<button type="button" onclick="location.href='{%url 'log' %}'">Logout</button>
+</div>
 </body>
 </html>
