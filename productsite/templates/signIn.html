@@ -14,17 +14,24 @@
 	
 </head>
 <body>
+	<div class="header">
 	<h1>Rack<span>store</span></h1>
+	</div>
+	<div class="loginform">
 <p>Input your your email and password to log in </p>
 <form action="/postsign/" method="post">
 	{% csrf_token %}
-	<p1>Email :</p1>
-	<input type="email" name="email"><br><br>
-	<p1>Password :</p1>
-	<input type="password" name="pass"><br><br>
-	<input class="s-btn" type="submit" value="SignIn" >
+	
+	<input type="email" name="email" placeholder="Email address"><br><br>
+	
+	<input type="password" name="pass" placeholder="Password"><br><br>
+	<input class="s-btn" type="submit" value="SignIn" ><br><br>
 	<button class="s-btn" type="button" onclick="location.href='{%url 'signup' %}'">SignUP</button>
 </form>
+</div>
+<footer>
+	<h1>Rack<span>store</span></h1>
+</footer>
 </body>
 </html>
 

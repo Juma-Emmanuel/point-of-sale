@@ -11,10 +11,25 @@ body{
     }
     h1{
         color: black;
-        margin-top: 34vh;
+        marhgin-top: 34vh;
         font-size: 56px;
         font-weight: bold;
         font-style: italic;
+    }
+    .header{
+        display: flex;
+        align-items: center;
+       
+        margin-top: 13vh;
+        margin-bottom: 14px;
+        
+        height: 6vh;
+    }
+    .loginform{
+        background: wheat;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 0;
     }
     span{
         color: aqua;
@@ -22,25 +37,21 @@ body{
     p1{
         font-size: 23px;
     }
-    label{
-        font-size: 23px;
-
-    }
-    label #email{
-        margin-right: 80px;
-    }
+   
     input{
         font-size: 23px;
-        
+        border-radius: 10px;
+        padding: 5px;
     }
     .s-btn{
+        justify-content: center;
         background: aqua;
         border: 2px solid transparent;
        color: black;
        border-radius: 5px;
        display: inline-flex;
        font-size: 23px;
-       width: auto;
+       width: 36vh;
        height: 5vh;
     }
     .s-btn:hover{
@@ -48,4 +59,15 @@ body{
         box-shadow: 0 0 1rem aqua;
      
         transition: .3s;
+    }
+
+    footer{
+        display: flex;
+        
+        justify-content: center;
+        background: wheat;
+        margin-top: 9vh;   
+
+        height: 28vh;
+        width: 100%;
     }
