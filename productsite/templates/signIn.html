@@ -1,3 +1,4 @@
+{% load static %}
 {% if messg %}
 <script>
 	alert('{{messg}}');
@@ -8,17 +9,21 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" type="text/css" href="{% static 'css/signIn.css' %}">
 	<title>sign in</title>
+	
 </head>
 <body>
+	<h1>Rack<span>store</span></h1>
+<p>Input your your email and password to log in </p>
 <form action="/postsign/" method="post">
 	{% csrf_token %}
-	Email :
+	<p1>Email :</p1>
 	<input type="email" name="email"><br><br>
-	Password :
+	<p1>Password :</p1>
 	<input type="password" name="pass"><br><br>
-	<input type="submit" value="SignIn" >
-	<button type="button" onclick="location.href='{%url 'signup' %}'">SignUP</button>
+	<input class="s-btn" type="submit" value="SignIn" >
+	<button class="s-btn" type="button" onclick="location.href='{%url 'signup' %}'">SignUP</button>
 </form>
 </body>
 </html>

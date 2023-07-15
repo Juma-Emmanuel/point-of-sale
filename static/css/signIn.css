@@ -1,0 +1,51 @@
+body{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    form{
+    
+    
+    padding: 10px;
+    }
+    h1{
+        color: black;
+        margin-top: 34vh;
+        font-size: 56px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    span{
+        color: aqua;
+    }
+    p1{
+        font-size: 23px;
+    }
+    label{
+        font-size: 23px;
+
+    }
+    label #email{
+        margin-right: 80px;
+    }
+    input{
+        font-size: 23px;
+        
+    }
+    .s-btn{
+        background: aqua;
+        border: 2px solid transparent;
+       color: black;
+       border-radius: 5px;
+       display: inline-flex;
+       font-size: 23px;
+       width: auto;
+       height: 5vh;
+    }
+    .s-btn:hover{
+        
+        box-shadow: 0 0 1rem aqua;
+     
+        transition: .3s;
+    }
