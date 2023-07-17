@@ -16,6 +16,11 @@
 <body>
 
 Welcome {{n}}
+
+{% if user_role == 'user_rolle' %}
+    <a href="admin-login.html">Admin Login</a>
+    
+{% endif %}
 <div>
 <button type="button" onclick="location.href='{%url 'log' %}'">Logout</button>
 </div>
