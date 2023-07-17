@@ -74,14 +74,14 @@ def postsign(request):
     
     context = {  
         
-        "user_role": 'user_rolle'
+        "display": 'link'
     }
-    check=5
+    
     if email =='user6@gmail.com':
-        return render(request, "welcome.html", )
+        return render(request, "welcome.html",context )
     else:
         
-        return render(request, "welcome.html",context)
+        return render(request, "welcome.html",)
 
 def logout(request):
     auth.logout(request)
