@@ -70,18 +70,28 @@ def postsign(request):
     except:
         message = "invalid credentials"
         return render(request, "signIn.html",{"messg":message})
-        print(user['localId'])
+    #print(user['idToken'])
+    session_id = user['idToken']
+    request.session['uid']=str(session_id)
+
     
+
+    idtoken = request.session['uid']
+    a = authe.get_account_info(idtoken)
+    a = a['users']
+    a = a[0]
+    a = a['localId']
+    print("hi"+str(a))
     context = {  
         
         "display": 'link'
     }
-    
-    if email =='user6@gmail.com':
-        return render(request, "welcome.html",context )
+    check=''
+    if a =='BVM7pJIxKShHVmZ84u1LcjtmPsF2':
+        return render(request, "welcome.html", )
     else:
         
-        return render(request, "welcome.html",)
+        return render(request, "welcome.html",context)
 
 def logout(request):
     auth.logout(request)
