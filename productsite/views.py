@@ -86,8 +86,8 @@ def postsign(request):
         
         "display": 'link'
     }
-    check=''
-    if a =='BVM7pJIxKShHVmZ84u1LcjtmPsF2':
+    
+    if (a =='ULSWyaqHKuY4SreAlBvDFIHiehj1') or (a == 'p5acZtl0u7XMR4nLSZcZBIAOfP92'):
         return render(request, "welcome.html", )
     else:
         
