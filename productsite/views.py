@@ -97,8 +97,26 @@ def logout(request):
     auth.logout(request)
     return render(request,"signIn.html",)
 
+def create(request):
+    return render(request, 'create.html',)
+
+
+def postcreate(request):
+    productId =request.POST.get('productId')
+    productName = request.POST.get('productName')
+    productDescription = request.POST.get('productDescription')
+    productPrice = request.POST.get('productPrice' )
+
+    data = {
+        "productId":productId,
+        "productName":productName,
+        "productDescription": productDescription,
+        "productPrice":productPrice,
+    }
 
 
 
+
+    return render(request, 'welcome.html',)
 
 

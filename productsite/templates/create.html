@@ -18,15 +18,20 @@
 	<h1>Rack<span>store</span></h1>
 	</div>
 	<div class="loginform">
-<p>Input your your email and password to log in </p>
-<form action="/postsign/" method="post">
+<p>Fill in the info for a product</p>
+<form action="/postcreate/" method="post">
 	{% csrf_token %}
 	Product Id
 	<input type="text" name="productId" ><br><br>
 	Product Name:
-	<input type="text" name="pass" placeholder="Password"><br><br>
-	<input class="s-btn" type="submit" value="SignIn" ><br><br>
-	<button class="s-btn" type="button" onclick="location.href='{%url 'signup' %}'">SignUP</button>
+	<input type="text" name="productName" ><br><br>
+	Product Description:
+	<textarea rows="5" cols="40" name="productDescription"></textarea>
+	
+	Product Price:
+	<input type="text" name="productprice" ><br><br>
+	<input class="s-btn" type="submit" value="Add product" ><br><br>
+	
 </form>
 </div>
 <footer>
