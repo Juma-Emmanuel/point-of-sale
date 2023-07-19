@@ -107,15 +107,16 @@ def postcreate(request):
     productDescription = request.POST.get('productDescription')
     productPrice = request.POST.get('productPrice' )
 
+    idtoken = request.session(uid)
+
+
     data = {
         "productId":productId,
         "productName":productName,
         "productDescription": productDescription,
         "productPrice":productPrice,
     }
-
-
-
+    database.child(product).child(prod_info).set(data)
 
     return render(request, 'welcome.html',)
 
