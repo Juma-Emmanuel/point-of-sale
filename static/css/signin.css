@@ -1,4 +1,11 @@
 body{
 	color: blue;
 	background: yellowgreen;
+	align-items: center;
+}
+.loginform{
+	background: linear-gradient(blue,violet);
+}
+form{
+	
 }
